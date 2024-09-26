@@ -22,7 +22,7 @@ $totales_productos_json = json_encode($datos_productos['totales']);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Proyecto/style.css">
+    <link rel="stylesheet" href="/Ojevazt/Proyecto/css/style.css">
     <title>Resumen de Ventas</title>
 </head>
 <body>
@@ -31,7 +31,7 @@ $totales_productos_json = json_encode($datos_productos['totales']);
 <div class="principal">
     <div class="barra">
         <div class="alternar">
-            <img src="/Proyecto/Iconos/Alternar.svg">
+            <img src="/Ojevazt//Proyecto/Iconos/Alternar.svg">
         </div>
         <div class="fechas">
             <input type="text" id="fechainicial" name="fechainicial" placeholder="Fecha inicial" 
@@ -55,7 +55,7 @@ $totales_productos_json = json_encode($datos_productos['totales']);
                 <div class="nombres">Ventas</div>
             </div>
             <div class="icono-tarjeta">
-                <img src="/Proyecto/Iconos/Ventas.svg">
+                <img src="/Ojevazt//Proyecto/Iconos/Ventas.svg">
             </div>
         </div>
         <!-- Puedes añadir más tarjetas aquí -->
@@ -112,9 +112,9 @@ $totales_productos_json = json_encode($datos_productos['totales']);
     var totalesProductosIniciales = <?php echo $totales_productos_json; ?>;
 </script>
 
-<script src="Proyecto/script.js"></script>
-<script src="/Proyecto/Librerias/Chart.js/chart.umd.js"></script>
-<script src="/Proyecto/Librerias/jQuery/jquery-3.7.1.min.js"></script>
+<script src="/Ojevazt/Proyecto/script.js"></script>
+<script src="/Ojevazt/Proyecto/Librerias/Chart.js/chart.umd.js"></script>
+<script src="/Ojevazt/Proyecto/Librerias/jQuery/jquery-3.7.1.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var ctxPie = document.getElementById('PieChart').getContext('2d');
@@ -211,6 +211,6 @@ $totales_productos_json = json_encode($datos_productos['totales']);
     }, 5000); // Actualizar cada 60 segundos (opcional)
 });
 </script>
-<script src="/Proyecto/script.js"></script>
+<script src="/Ojevazt/Proyecto/script.js"></script>
 </body>
 </html>
