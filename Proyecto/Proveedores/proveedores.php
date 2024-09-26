@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-    <title></title>
+    <link rel="stylesheet" href="/Ojevazt/Proyecto/css/style.css">
+    <title>Proveedores</title>
 </head>
 <body>
 <?php include("../barra.php"); ?>
