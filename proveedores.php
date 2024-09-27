@@ -54,6 +54,10 @@
                 const tbody = $('#tabla-proveedores tbody');
                 tbody.empty();
 
+                if (data.length === 0) {
+                    window.location.href = 'insertarproveedor.php';
+                    return;
+                }
                 data.forEach(function(Proveedor) {
                     const fila = `<tr>
                         <td>${Proveedor.ID_PROVEEDOR}</td>

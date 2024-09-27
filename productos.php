@@ -56,6 +56,10 @@
                 const tbody = $('#tabla-productos tbody');
                 tbody.empty();
 
+                if (data.length === 0) {
+                    window.location.href = 'insertarproducto.php';
+                    return;
+                }
                 data.forEach(function(Producto) {
                     const fila = `<tr>
                         <td>${Producto.ID_PRODUCTO}</td>

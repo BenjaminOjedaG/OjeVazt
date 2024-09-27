@@ -1,7 +1,5 @@
 <?php
-include ("bd.php");
-
-$id_cliente = $_GET['id'];
+include("bd.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $Cedula = $_POST['cedula'];
@@ -12,32 +10,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $Contacto = $_POST['contacto'];
     $RUT = $_POST['rut'];
 
-    $consulta = mysqli_query($bd, "UPDATE cliente SET Cédula = '$Cedula', Nombre = '$Nombre', Deuda = '$Deuda', Fecha_de_Nacimiento = '$Fecha_de_Nacimiento', Tickets_de_Sorteo = '$Tickets_de_Sorteo', Contacto = '$Contacto', RUT = '$RUT' WHERE ID_CLIENTE = $id_cliente");
-
-    if ($consulta) {
-        header("Location: clientes.php");
-        exit;
+    $consulta = mysqli_query($bd, "INSERT INTO producto (Cédula, Nombre, Deuda, Fecha_de_Nacimiento, Tickets_de_Sorteo, Contacto, Rut, Activo) VALUES ('$Cedula', '$Nombre', '$Deuda', '$Fecha_de_Nacimiento', '$Tickets_de_Sorteo', '$Contacto', '$RUT', 1)");
+        if ($consulta) {
+            header("Location: cliente.php");
+            exit;
+        }
     }
-} else {
-    $sql = mysqli_query($bd,"SELECT * FROM cliente WHERE Activo = 1 AND ID_CLIENTE = $id_cliente");
-    
-    if ($sql->num_rows > 0) {
-        $cliente = $sql->fetch_assoc();
-    }
-}
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Cliente</title>
     <link rel="stylesheet" href="css/style.css">
+    <title></title>
 </head>
 <body>
-    <h2>Editar Cliente</h2>
-
-    <form method="POST">
+<?php include("barra.php"); ?>
+<div class="principal">
+<div class="detalles">
+    <form action="insertarclientes.php" method="POST">
         <label for="cedula">Cédula:</label>
         <input type="text" id="cedula" name="cedula" required><br>
 
@@ -61,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <input type="submit" value="Actualizar Cliente">
     </form>
-
-    <a href="clientes.php">Volver a la lista de clientes</a>
+</div>
+</div>
 </body>
 </html>

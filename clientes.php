@@ -55,6 +55,11 @@
                 const tbody = $('#tabla-clientes tbody');
                 tbody.empty();
 
+                if (data.length === 0) {
+                    window.location.href = 'insertarclientes.php';
+                    return;
+                }
+
                 data.forEach(function(Cliente) {
                     const fila = `<tr>
                         <td>${Cliente.ID_CLIENTE}</td>
