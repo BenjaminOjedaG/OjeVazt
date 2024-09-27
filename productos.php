@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Ojevazt/Proyecto/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title></title>
 </head>
 <body>
-<?php include("../barra.php"); ?>
+<?php include("barra.php"); ?>
 <div class="principal">
     <div class="barra">
         <div class="alternar">
-            <img src="/Proyecto/Iconos/Alternar.svg">
+            <img src="Imágenes/Iconos/Alternar.svg">
         </div>
         <div class="buscar">
             <label>
             <input type="text" placeholder="Buscar aquí" id="buscar">
-            <img src="/Proyecto/Iconos/Buscar.svg">
+            <img src="Imágenes/Iconos/Buscar.svg">
             </label>
         </div>
     </div>
@@ -44,7 +44,7 @@
         </table>
     </div>
 
-    <script src="/Proyecto/Librerias/jQuery/jquery-3.7.1.min.js"></script>
+    <script src="Librerias/jQuery/jquery-3.7.1.min.js"></script>
     <script>
 
     function cargarProductos(buscar = '') {
@@ -114,7 +114,7 @@
         });
     });
     </script>
-    <script src="/Proyecto/script.js"></script>
+    <script src="js/script.js"></script>
 </div>
 </body>
 </html>

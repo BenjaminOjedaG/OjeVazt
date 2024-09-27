@@ -1,5 +1,5 @@
 <?php
-include ("../bd.php");
+include ("bd.php");
 
 $id_cliente = $_GET['id'];
 
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Cliente</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <h2>Editar Cliente</h2>
@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="number" id="tickets" name="tickets" value="<?php echo $cliente['Tickets_de_Sorteo']; ?>" required><br>
 
         <label for="contacto">Contacto:</label>
-        <input type="text" id="contacto" name="contacto" value="<?php echo $cliente['Contacto']; ?>" required><br>
+        <input type="text" id="contacto" name="contacto" value="<?php echo $cliente['Contacto']; ?>"><br>
 
         <label for="rut">RUT:</label>
         <input type="text" id="rut" name="rut" value="<?php echo $cliente['RUT']; ?>" required><br>

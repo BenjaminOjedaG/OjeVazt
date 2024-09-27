@@ -49,29 +49,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Principal</title>
-    <link rel="stylesheet" href="/Ojevazt/Proyecto/css/style.css">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
     
 </head>
 
 <body>
-
-<div class="contenedor">
-    <?php include("barra.php"); ?>
-        <main>
-            <h1>Bienvenido <?php echo $_SESSION["nombre"]; ?></h1>
-            <h2 id="titulo_con_fecha"></h2>
-            <div class="contenedoresenmenuprincipal">
-                <div class="contenedordecumpleañeros">
-                    <h2>Clientes de cumpleaños </h2>
-                </div>
-                <div class="contenedordeproductos">
-                    <h2>Productos con poco Stock</h2>
-                </div>
-            </div>
-        </main>
- </div>
-
+<?php include("barra.php"); ?>
+<div class="principal">
+    <div class="barra">
+        <div class="alternar">
+            <img src="Imágenes/Iconos/Alternar.svg">
+        </div>
+        <div class="buscar">
+            <label>
+            <input type="text" placeholder="Buscar aquí" id="buscar">
+            <img src="Imágenes/Iconos/Buscar.svg">
+            </label>
+        </div>
+    </div>
+    <div class="usuario">
+        <img src="" alt="Usuario">
+    </div>
+    <h1>Bienvenido <?php echo $_SESSION["nombre"]; ?></h1>
+    <h2 id="titulo_con_fecha"></h2>
+    </div>
   
 </body>
 <script>
@@ -149,6 +151,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     }
 </script>
+<script src="js/script.js"></script>
 
 
 </html>

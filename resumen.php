@@ -1,6 +1,6 @@
 <?php
-include("../bd.php");
-include("../funciones.php");
+include("bd.php");
+include("funciones.php");
 
 $ventas_recientes = getVentasRecientes($bd);
 $total_ventas = getCantidadVentas($bd);
@@ -22,16 +22,16 @@ $totales_productos_json = json_encode($datos_productos['totales']);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Ojevazt/Proyecto/css/style.css">
-    <title>Resumen de Ventas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title></title>
 </head>
 <body>
-<?php include("../barra.php"); ?>
+<?php include("barra.php"); ?>
 
 <div class="principal">
     <div class="barra">
         <div class="alternar">
-            <img src="/Ojevazt//Proyecto/Iconos/Alternar.svg">
+            <img src="Imágenes/Iconos/Alternar.svg">
         </div>
         <div class="fechas">
             <input type="text" id="fechainicial" name="fechainicial" placeholder="Fecha inicial" 
@@ -55,7 +55,7 @@ $totales_productos_json = json_encode($datos_productos['totales']);
                 <div class="nombres">Ventas</div>
             </div>
             <div class="icono-tarjeta">
-                <img src="/Ojevazt//Proyecto/Iconos/Ventas.svg">
+                <img src="Imágenes/Iconos/Ventas.svg">
             </div>
         </div>
         <!-- Puedes añadir más tarjetas aquí -->
@@ -112,9 +112,9 @@ $totales_productos_json = json_encode($datos_productos['totales']);
     var totalesProductosIniciales = <?php echo $totales_productos_json; ?>;
 </script>
 
-<script src="/Ojevazt/Proyecto/script.js"></script>
-<script src="/Ojevazt/Proyecto/Librerias/Chart.js/chart.umd.js"></script>
-<script src="/Ojevazt/Proyecto/Librerias/jQuery/jquery-3.7.1.min.js"></script>
+<script src="js/script.js"></script>
+<script src="Librerias/Chart.js/chart.umd.js"></script>
+<script src="Librerias/jQuery/jquery-3.7.1.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var ctxPie = document.getElementById('PieChart').getContext('2d');
@@ -182,12 +182,10 @@ $totales_productos_json = json_encode($datos_productos['totales']);
             success: function(response) {
                 var data = JSON.parse(response);
                 
-                // Actualizar los datos de la gráfica de ventas
                 LineChart.data.labels = data.etiquetasVentas;
                 LineChart.data.datasets[0].data = data.datosVentas;
                 LineChart.update();
                 
-                // Actualizar los datos de la gráfica de productos vendidos
                 PieChart.data.labels = data.nombresProductos;
                 PieChart.data.datasets[0].data = data.totalesProductos;
                 PieChart.update();
@@ -195,20 +193,17 @@ $totales_productos_json = json_encode($datos_productos['totales']);
         });
     }
 
-    // Detectar cambios en los inputs de fecha
     $('#fechainicial, #fechafinal').change(function() {
-        // Solo actualizar si ambas fechas tienen un valor
         if ($('#fechainicial').val() && $('#fechafinal').val()) {
             actualizarGraficas();
         }
     });
 
-    // También puedes actualizar automáticamente cada cierto tiempo si deseas que sea asincrónico constante
     setInterval(function() {
         if ($('#fechainicial').val() && $('#fechafinal').val()) {
             actualizarGraficas();
         }
-    }, 5000); // Actualizar cada 60 segundos (opcional)
+    }, 5000);
 });
 </script>
 <script src="/Ojevazt/Proyecto/script.js"></script>

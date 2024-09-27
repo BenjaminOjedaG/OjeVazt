@@ -1,5 +1,5 @@
 <?php
-include ("../bd.php");
+include ("bd.php");
 
 $id_cliente = $_POST['id'];
 

@@ -90,42 +90,42 @@ body {
 
 .navegar ul li:nth-child(1):hover .icono img,
 .navegar ul li:nth-child(1).hovered .icono img {
-    content: url('Iconos/Menu hover.svg');
+    content: url('/Ojevazt/Imágenes/Iconos/Menu hover.svg');
 }
 
 .navegar ul li:nth-child(2):hover .icono img,
 .navegar ul li:nth-child(2).hovered .icono img {
-    content: url('Iconos/Cobros hover.svg');
+    content: url('/Ojevazt/Imágenes/Iconos/Cobros hover.svg');
 }
 
 .navegar ul li:nth-child(3):hover .icono img,
 .navegar ul li:nth-child(3).hovered .icono img {
-    content: url('Iconos/Pagos hover.svg');
+    content: url('/Ojevazt/Imágenes/Iconos/Pagos hover.svg');
 }
 
 .navegar ul li:nth-child(4):hover .icono img,
 .navegar ul li:nth-child(4).hovered .icono img {
-    content: url('Iconos/Proveedores hover.svg');
+    content: url('/Ojevazt/Imágenes/Iconos/Proveedores hover.svg');
 }
 
 .navegar ul li:nth-child(5):hover .icono img,
 .navegar ul li:nth-child(5).hovered .icono img {
-    content: url('Iconos/Productos hover.svg');
+    content: url('/Ojevazt/Imágenes/Iconos/Productos hover.svg');
 }
 
 .navegar ul li:nth-child(6):hover .icono img,
 .navegar ul li:nth-child(6).hovered .icono img {
-    content: url('Iconos/Clientes hover.svg');
+    content: url('/Ojevazt/Imágenes/Iconos/Clientes hover.svg');
 }
 
 .navegar ul li:nth-child(7):hover .icono img,
 .navegar ul li:nth-child(7).hovered .icono img {
-    content: url('Iconos/Resumen hover.svg');
+    content: url('/Ojevazt/Imágenes/Iconos/Resumen hover.svg');
 }
 
 .navegar ul li:nth-child(8):hover .icono img,
 .navegar ul li:nth-child(8).hovered .icono img {
-    content: url('Iconos/Sorteos hover.svg');
+    content: url('/Ojevazt/Imágenes/Iconos/Sorteos hover.svg');
 }
 
 .navegar ul li:hover a::before,

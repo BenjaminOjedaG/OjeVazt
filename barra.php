@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Ojevazt/Proyecto/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title></title>
 </head>
 <body>
@@ -11,50 +11,50 @@
         <div class="navegar">
             <ul>
                 <li>
-                    <a href="">
-                        <span class="icono"><img src="/Ojevazt//Proyecto/Iconos/Menu.svg"></span>
+                    <a href="menu.php">
+                        <span class="icono"><img src="Imágenes/Iconos/Menu.svg"></span>
                         <span class="titulo">Menú</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/Proyecto/cobros.php">
-                        <span class="icono"><img src="/Ojevazt//Proyecto/Iconos/Cobros.svg"></span>
+                    <a href="cobros.php">
+                        <span class="icono"><img src="Imágenes/Iconos/Cobros.svg"></span>
                         <span class="titulo">Cobros</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/Proyecto/pagos.php">
-                        <span class="icono"><img src="/Ojevazt//Proyecto/Iconos/Pagos.svg"></span>
+                    <a href="pagos.php">
+                        <span class="icono"><img src="Imágenes/Iconos/Pagos.svg"></span>
                         <span class="titulo">Pagos</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/Proyecto/Proveedores/proveedores.php">
-                        <span class="icono"><img src="/Ojevazt//Proyecto/Iconos/Proveedores.svg"></span>
+                    <a href="proveedores.php">
+                        <span class="icono"><img src="Imágenes/Iconos/Proveedores.svg"></span>
                         <span class="titulo">Proveedores</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/Proyecto/Productos/productos.php">
-                        <span class="icono"><img src="/Ojevazt//Proyecto/Iconos/Productos.svg"></span>
+                    <a href="productos.php">
+                        <span class="icono"><img src="Imágenes/Iconos/Productos.svg"></span>
                         <span class="titulo">Productos</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/Proyecto/Clientes/clientes.php">
-                        <span class="icono"><img src="/Ojevazt//Proyecto/Iconos/Clientes.svg"></span>
+                    <a href="clientes.php">
+                        <span class="icono"><img src="Imágenes/Iconos/Clientes.svg"></span>
                         <span class="titulo">Clientes</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/Proyecto/Resumen/resumen.php">
-                        <span class="icono"><img src="/Ojevazt//Proyecto/Iconos/Resumen.svg"></span>
+                    <a href="resumen.php">
+                        <span class="icono"><img src="Imágenes/Iconos/Resumen.svg"></span>
                         <span class="titulo">Resumen</span>
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <span class="icono"><img src="/Ojevazt//Proyecto/Iconos/Sorteos.svg"></span>
+                    <a href="sorteos.php">
+                        <span class="icono"><img src="Imágenes/Iconos/Sorteos.svg"></span>
                         <span class="titulo">Sorteos</span>
                     </a>
                 </li>
@@ -63,7 +63,7 @@
     </div>
 
     <script>
-        let lista = document.querySelector('.navegar li');
+        let lista = document.querySelectorAll('.navegar li');
     function enlaceActivo() {
         lista.forEach((item) =>
             item.classList.remove(''));
