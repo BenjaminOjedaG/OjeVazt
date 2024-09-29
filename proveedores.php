@@ -40,7 +40,8 @@
             </tbody>
         </table>
         </div>
-        </div>
+    </div>
+    <button class="agregar">+</button>
         
 
     <script src="Librerias/jQuery/jquery-3.7.1.min.js"></script>

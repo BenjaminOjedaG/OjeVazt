@@ -10,9 +10,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $Contacto = $_POST['contacto'];
     $RUT = $_POST['rut'];
 
-    $consulta = mysqli_query($bd, "INSERT INTO producto (Cédula, Nombre, Deuda, Fecha_de_Nacimiento, Tickets_de_Sorteo, Contacto, Rut, Activo) VALUES ('$Cedula', '$Nombre', '$Deuda', '$Fecha_de_Nacimiento', '$Tickets_de_Sorteo', '$Contacto', '$RUT', 1)");
+    $consulta = mysqli_query($bd, "INSERT INTO cliente (Cédula, Nombre, Deuda, Fecha_de_Nacimiento, Tickets_de_Sorteo, Contacto, Rut, Activo) VALUES ('$Cedula', '$Nombre', '$Deuda', '$Fecha_de_Nacimiento', '$Tickets_de_Sorteo', '$Contacto', '$RUT', 1)");
         if ($consulta) {
-            header("Location: cliente.php");
+            header("Location: clientes.php");
             exit;
         }
     }
@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <label for="rut">RUT:</label>
         <input type="text" id="rut" name="rut"><br>
 
-        <input type="submit" value="Actualizar Cliente">
+        <input type="submit" value="Insertar Cliente">
     </form>
 </div>
 </div>

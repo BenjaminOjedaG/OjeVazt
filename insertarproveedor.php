@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $Razon_Social = $_POST['razon_social'];
     $RUT = $_POST['rut'];
 
-    $consulta = mysqli_query($bd, "INSERT INTO proovedor (Contacto, Razon_social, Rut, Activo) VALUES ('$Contacto', '$Razon_social', '$RUT', 1)");
+    $consulta = mysqli_query($bd, "INSERT INTO proveedor (Contacto, Razón_social, Rut, Activo) VALUES ('$Contacto', '$Razon_social', '$RUT', 1)");
         if ($consulta) {
             header("Location: proveedores.php");
             exit;
@@ -37,9 +37,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <label for="rut">RUT:</label>
         <input type="text" id="rut" name="rut" required><br>
 
-        <input type="submit" value="Actualizar Proveedor">
+        <input type="submit" value="Insertar Proveedor">
 
-        <button type="submit">Insertar Proveedor</button>
     </form>
 
 </div>
